@@ -26,6 +26,8 @@ class Country
     def self.find_global_stats
         self.all.find {|c| c.country == "World"}
     end
-    binding.pry
+
+
+    # binding.pry
 
 end

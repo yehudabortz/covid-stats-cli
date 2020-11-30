@@ -22,5 +22,5 @@ class Scraper
     def self.create_and_parse
         self.new.parse_json
     end
-binding.pry
+# binding.pry
 end
