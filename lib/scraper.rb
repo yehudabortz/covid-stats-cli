@@ -5,6 +5,7 @@ require 'pry'
 require 'awesome_print'
 
 
+
 class Scraper
     API = "https://coronavirus-19-api.herokuapp.com/countries"
 
@@ -21,5 +22,5 @@ class Scraper
     def self.create_and_parse
         self.new.parse_json
     end
-# binding.pry
+binding.pry
 end
