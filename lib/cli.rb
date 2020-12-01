@@ -52,9 +52,7 @@ class Cli
         elsif input == "no" || input == "NO" || input == "n" || input == "No" || input == "N"
             sleep(0.065)
             puts ""
-            puts "———————————————————————————————————————"
-            puts "Ok, Goodbye!".colorize(:magenta)
-            puts "———————————————————————————————————————"
+            puts "Ok, Goodbye!".colorize(:light_cyan)
             puts ""
         else
             puts ""
@@ -71,7 +69,7 @@ class Cli
         numbered_list = []
         i = 1
         Country.list_countries.each do |c|
-            numbered_list << c.split("").insert(0, "#{i.to_s.colorize(:light_cyan)}. ").join
+            numbered_list << c.split("").insert(0, "#{i.to_s.insert(-1, ".").colorize(:light_cyan)} ").join
             i += 1
             # binding.pry
         end
@@ -160,12 +158,9 @@ class Cli
         if input == "yes" || input == "YES" || input == "y" || input == "Yes" || input == "Y"
             list_country_options
         elsif input == "no" || input == "NO" || input == "n" || input == "No" || input == "N"
-            puts ""
             sleep(0.065)
             puts ""
-            puts "———————————————————————————————————————"
-            puts "Ok, Goodbye!".colorize(:magenta)
-            puts "———————————————————————————————————————"
+            puts "Ok, Goodbye!".colorize(:light_cyan)
             puts ""
         else
             puts ""
