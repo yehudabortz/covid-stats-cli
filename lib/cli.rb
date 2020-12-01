@@ -126,7 +126,7 @@ class Cli
             puts "  ACTIVE | #{tot_active}".colorize(:light_yellow)
             sleep(0.065)
             puts ""
-            puts "  TESTS | #{tot_tests}".colorize(:light_blue)
+            puts "  TESTED | #{tot_tests}".colorize(:light_blue)
             sleep(0.065)
             puts ""
             puts "  CRITICAL | #{critical}".colorize(:cyan)
