@@ -79,6 +79,8 @@ class Cli
             tot_deaths = add_commas_to_int("#{selection.deaths}")
             tot_recovered = add_commas_to_int("#{selection.recovered}")
             tot_active = add_commas_to_int("#{selection.active}")
+            critical = add_commas_to_int("#{selection.critical}")
+            
             puts ""
             puts "———————————————————————————————————————"
             puts ""
@@ -91,6 +93,8 @@ class Cli
             puts "TOTAL RECOVERED | #{tot_recovered}".colorize(:green)
             puts ""
             puts "TOTAL ACTIVE | #{tot_active}".colorize(:light_yellow)
+            puts ""
+            puts "CRITICAL | #{critical}".colorize(:cyan)
             puts ""
             puts "———————————————————————————————————————"
             puts ""
