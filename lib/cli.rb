@@ -110,7 +110,6 @@ class Cli
         input = gets.strip
         if input == "yes" || input == "YES" || input == "y" || input == "Yes" || input == "Y"
             list_country_options
-            user_country_selection
         elsif input == "no" || input == "NO" || input == "n" || input == "No" || input == "N"
             puts ""
             puts "Ok, Goodbye!"
