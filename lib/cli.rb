@@ -79,22 +79,37 @@ class Cli
             tot_deaths = add_commas_to_int("#{selection.deaths}")
             tot_recovered = add_commas_to_int("#{selection.recovered}")
             tot_active = add_commas_to_int("#{selection.active}")
+            tot_tests = add_commas_to_int("#{selection.totalTests}")
             critical = add_commas_to_int("#{selection.critical}")
+            today_cases = add_commas_to_int("#{selection.todayCases}")
+            today_deaths = add_commas_to_int("#{selection.todayDeaths}")
             
             puts ""
+            puts ""
+            puts "———————————————————————————————————————"
+            puts "#{selection.country} Coronavirus Stats:"
             puts "———————————————————————————————————————"
             puts ""
-            puts "#{selection.country} Coronavirus Stats:"
+            puts "Total:"
             puts ""
-            puts "TOTAL CASES | #{tot_cases}".colorize(:light_magenta)
+            puts "CASES | #{tot_cases}".colorize(:light_magenta)
             puts ""
-            puts "TOTAL DEATHS | #{tot_deaths}".colorize(:light_red)
+            puts "DEATHS | #{tot_deaths}".colorize(:light_red)
             puts ""
-            puts "TOTAL RECOVERED | #{tot_recovered}".colorize(:green)
+            puts "RECOVERED | #{tot_recovered}".colorize(:green)
             puts ""
-            puts "TOTAL ACTIVE | #{tot_active}".colorize(:light_yellow)
+            puts "ACTIVE | #{tot_active}".colorize(:light_yellow)
+            puts ""
+            puts "TESTS | #{tot_tests}".colorize(:light_blue)
             puts ""
             puts "CRITICAL | #{critical}".colorize(:cyan)
+            puts ""
+            puts ""
+            puts "Today:"
+            puts ""
+            puts "CASES | #{today_cases}".colorize(:light_magenta)
+            puts ""
+            puts "DEATHS | #{today_deaths}".colorize(:light_red)
             puts ""
             puts "———————————————————————————————————————"
             puts ""
@@ -121,8 +136,5 @@ class Cli
     end
     
     # binding.pry
-
-
-
 end
 

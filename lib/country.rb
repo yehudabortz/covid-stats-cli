@@ -15,7 +15,6 @@ class Country
         @@all
     end
 
-
     def self.create_from_scraper
         covid_data = Scraper.create_and_parse
         covid_data.each do |country|
@@ -39,8 +38,5 @@ class Country
         self.find_stats(list_countries[input.to_i - 1])
     end
     # binding.pry
-
-
-
 
 end
