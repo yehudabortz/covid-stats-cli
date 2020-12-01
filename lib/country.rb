@@ -1,6 +1,4 @@
-require_relative '../config/environment.rb'
-
-class Country
+class CovidStatsCli::Country
     @@all = []
 
     def initialize(attributes)
@@ -16,7 +14,7 @@ class Country
     end
 
     def self.create_from_scraper
-        covid_data = Scraper.create_and_parse
+        covid_data = CovidStatsCli::Scraper.create_and_parse
         covid_data.each do |country|
             self.new(country)
         end

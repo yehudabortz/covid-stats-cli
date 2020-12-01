@@ -1,16 +1,13 @@
-require_relative '../config/environment.rb'
-require_relative './formattable.rb'
-
-class Cli
-    include Formattable::AddCommas
+class CovidStatsCli::Cli
+    include CovidStatsCli::Formattable::AddCommas
 
     def run
         welcome_user
     end
 
     def welcome_user
-        Country.create_from_scraper
-        global_stats = Country.find_stats("World")
+        CovidStatsCli::Country.create_from_scraper
+        global_stats = CovidStatsCli::Country.find_stats("World")
         tot_cases = add_commas_to_int("#{global_stats.cases}")
         tot_deaths = add_commas_to_int("#{global_stats.deaths}")
         tot_recovered = add_commas_to_int("#{global_stats.recovered}")
@@ -68,7 +65,7 @@ class Cli
     def list_country_options
         numbered_list = []
         i = 1
-        Country.list_countries.each do |c|
+        CovidStatsCli::Country.list_countries.each do |c|
             numbered_list << c.split("").insert(0, "#{i.to_s.insert(-1, ".").colorize(:light_cyan)} ").join
             i += 1
             # binding.pry
@@ -91,8 +88,8 @@ class Cli
     def user_country_selection
         puts "Enter The Number Corresponding To Your Selection (e.g. #{"207".colorize(:light_cyan)})"
         input = gets.strip
-        if input.to_i.to_s == input && input.to_i <= Country.list_countries.length
-            selection = Country.find_from_input(input)
+        if input.to_i.to_s == input && input.to_i <= CovidStatsCli::Country.list_countries.length
+            selection = CovidStatsCli::Country.find_from_input(input)
             tot_cases = add_commas_to_int("#{selection.cases}")
             tot_deaths = add_commas_to_int("#{selection.deaths}")
             tot_recovered = add_commas_to_int("#{selection.recovered}")

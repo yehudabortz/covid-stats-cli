@@ -1,4 +1,4 @@
-module Formattable
+module CovidStatsCli::Formattable
     module AddCommas
         def add_commas_to_int(num)
             split_num = num.to_s.split("")

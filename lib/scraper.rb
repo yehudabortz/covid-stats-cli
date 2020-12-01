@@ -1,12 +1,5 @@
-require 'JSON'
-require 'net/http'
-require 'open-uri'
-require 'pry'
-require 'awesome_print'
 
-
-
-class Scraper
+class CovidStatsCli::Scraper
     API = "https://coronavirus-19-api.herokuapp.com/countries"
 
     def get_response_body
