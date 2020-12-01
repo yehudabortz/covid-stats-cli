@@ -35,6 +35,5 @@ class CovidStatsCli::Country
     def self.find_from_input(input)
         self.find_stats(list_countries[input.to_i - 1])
     end
-    # binding.pry
 
 end

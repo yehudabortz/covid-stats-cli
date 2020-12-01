@@ -169,6 +169,5 @@ class CovidStatsCli::Cli
         end
     end
     
-    # binding.pry
 end
 

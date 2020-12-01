@@ -4,8 +4,6 @@ require 'JSON'
 require 'net/http'
 require 'open-uri'
 
-
-
 require_relative '../lib/modules/covid_stats_cli.rb'
 require_relative '../lib/scraper.rb'
 require_relative '../lib/country.rb'
