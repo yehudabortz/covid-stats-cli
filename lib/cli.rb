@@ -39,6 +39,7 @@ class Cli
         sleep(0.065)
         puts ""
         puts "————————————————————————————————"
+        sleep(0.065)
         continue_to_country_selection
     end
 
@@ -71,14 +72,18 @@ class Cli
         numbered_list = []
         i = 1
         Country.list_countries.each do |c|
-            numbered_list << c.split("").insert(0, "#{i}. ").join
+            numbered_list << c.split("").insert(0, "#{i.to_s.colorize(:light_cyan)}. ").join
             i += 1
             # binding.pry
         end
         puts ""
         puts "———————————————————————————————————————"
         puts ""
-        puts numbered_list
+        #sleeps each item in list to display smoothly
+        numbered_list.each do |item|
+            sleep(0.006)
+            puts item
+        end
         puts ""
         puts "———————————————————————————————————————"
         puts ""
@@ -87,7 +92,7 @@ class Cli
 
 
     def user_country_selection
-        puts "Enter The Number Corresponding To Your Selection (eg. 207)"
+        puts "Enter The Number Corresponding To Your Selection (e.g. #{"207".colorize(:light_cyan)})"
         input = gets.strip
         if input.to_i.to_s == input && input.to_i <= Country.list_countries.length
             selection = Country.find_from_input(input)
@@ -102,7 +107,7 @@ class Cli
             puts ""
             puts ""
             puts "———————————————————————————————————————"
-            puts "#{selection.country} Coronavirus Stats:"
+            puts "#{selection.country.colorize(:light_cyan)} Coronavirus Stats:"
             puts "———————————————————————————————————————"
             sleep(0.065)
             puts ""
@@ -138,6 +143,7 @@ class Cli
             sleep(0.065)
             puts ""
             puts "———————————————————————————————————————"
+            sleep(0.065)
             puts ""
         else
             puts ""
