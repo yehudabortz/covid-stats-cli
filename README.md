@@ -1,5 +1,5 @@
 # Covid Stats CLI
-Covid Stats CLI displays updated COVID-19 stats including global and country-specific data. 
+Covid Stats CLI uses an API to display updated COVID-19 stats including global and country-specific data. 
 
 
 ## Installation
@@ -16,6 +16,9 @@ $ bundle install
 ## Usage
 
 To run program use ```ruby bin/run```
+
+## Sources
+Coronavirus Data – [API](https://coronavirus-19-api.herokuapp.com/countries)
 
 
 ## Contributing
