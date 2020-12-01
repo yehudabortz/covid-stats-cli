@@ -39,14 +39,13 @@ class Cli
     
     def continue_to_country_selection
         puts ""
-        puts "Would You Like To Select A Country? y/n"
+        puts "Would You Like To View Stats By Country? (y/n)"
         input = gets.strip
         if input == "yes" || input == "YES" || input == "y" || input == "Yes" || input == "Y"
             list_country_options
         elsif input == "no" || input == "NO" || input == "n" || input == "No" || input == "N"
             puts "Ok, Goodbye!"
         else
-
             continue_to_country_selection
         end
 
@@ -61,8 +60,63 @@ class Cli
             # binding.pry
         end
         puts numbered_list
+        puts ""
+        puts "———————————————————————————————————————"
+        puts ""
+        user_country_selection
+    end
+
+    
+
+    def user_country_selection
+        puts "Enter The Number Corresponding To Your Selection (eg. 207)"
+        input = gets.strip
+        if input.to_i.to_s == input && input.to_i <= Country.list_countries.length
+            selection = Country.find_from_input(input)
+            tot_cases = add_commas_to_int("#{selection.cases}")
+            tot_deaths = add_commas_to_int("#{selection.deaths}")
+            tot_recovered = add_commas_to_int("#{selection.recovered}")
+            tot_active = add_commas_to_int("#{selection.active}")
+            puts ""
+            puts "———————————————————————————————————————"
+            puts "#{selection.country} Coronavirus Stats"
+            puts "———————————————————————————————————————"
+            puts ""
+            puts "TOTAL CASES | #{tot_cases}".colorize(:light_magenta)
+            puts ""
+            puts "TOTAL DEATHS | #{tot_deaths}".colorize(:light_red)
+            puts ""
+            puts "TOTAL RECOVERED | #{tot_recovered}".colorize(:green)
+            puts ""
+            puts "TOTAL ACTIVE | #{tot_active}".colorize(:light_yellow)
+            puts ""
+            puts "———————————————————————————————————————"
+            puts ""
+
+        else
+            user_country_selection
+        end   
+        search_again     
+    end
+
+    def search_again
+        puts "Would You Like To Search Again? (y/n)"
+        input = gets.strip
+        if input == "yes" || input == "YES" || input == "y" || input == "Yes" || input == "Y"
+            list_country_options
+            user_country_selection
+        elsif input == "no" || input == "NO" || input == "n" || input == "No" || input == "N"
+            puts ""
+            puts "Ok, Goodbye!"
+            puts ""
+        else
+            search_again
+        end
 
     end
+    
+    # binding.pry
+
 
 
 end

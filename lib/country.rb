@@ -35,8 +35,12 @@ class Country
         self.exclude_world_stats.collect {|c| c.country}.sort
     end
 
-
-
+    def self.find_from_input(input)
+        self.find_stats(list_countries[input.to_i - 1])
+    end
     # binding.pry
+
+
+
 
 end
