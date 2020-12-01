@@ -1,6 +1,5 @@
 require_relative '../config/environment.rb'
 require_relative './formattable.rb'
-require 'colorize'
 
 class Cli
     include Formattable::AddCommas
