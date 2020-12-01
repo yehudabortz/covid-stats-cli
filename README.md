@@ -1,5 +1,5 @@
-# Covid Stats CLI
-Covid Stats CLI uses an API to display updated COVID-19 stats including global and country-specific data. 
+# COVID Stats CLI
+COVID Stats CLI uses an API to display updated COVID-19 stats including global and country-specific data. 
 
 
 ## Installation
