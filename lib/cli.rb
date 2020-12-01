@@ -115,7 +115,7 @@ class Cli
             puts ""
 
         else
-            user_country_selection
+            puts "Invalid Input: #{input}"
         end   
         search_again     
     end
