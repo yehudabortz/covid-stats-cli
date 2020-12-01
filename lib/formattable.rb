@@ -11,7 +11,7 @@ module Formattable
             elsif split_num.length == 6 
                     split_num.insert(3, ",").join
             elsif split_num.length == 7
-                    split_num.insert(2, ",").insert(5, ",").join
+                    split_num.insert(1, ",").insert(5, ",").join
             elsif split_num.length == 8
                     split_num.insert(2, ",").insert(6, ",").join
             elsif split_num.length == 9
@@ -20,6 +20,5 @@ module Formattable
                     split_num.insert(1, ",").insert(4, ",").insert(8, ",").join
             end
         end
-    
     end
 end
