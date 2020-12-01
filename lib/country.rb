@@ -23,9 +23,18 @@ class Country
         end
     end
 
-    def self.find_global_stats
-        self.all.find {|c| c.country == "World"}
+    def self.find_stats(input)
+        self.all.find {|c| c.country == input}
     end
+
+    def self.exclude_world_stats
+        self.all.select {|c| c.country != "World"}
+    end
+
+    def self.list_countries
+        self.exclude_world_stats.collect {|c| c.country}.sort
+    end
+
 
 
     # binding.pry

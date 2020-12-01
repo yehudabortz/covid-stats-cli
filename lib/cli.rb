@@ -10,7 +10,7 @@ class Cli
 
     def welcome_user
         Country.create_from_scraper
-        global_stats = Country.find_global_stats
+        global_stats = Country.find_stats("World")
         tot_cases = add_commas_to_int("#{global_stats.cases}")
         tot_deaths = add_commas_to_int("#{global_stats.deaths}")
         tot_recovered = add_commas_to_int("#{global_stats.recovered}")
@@ -25,7 +25,6 @@ class Cli
         puts ""
         puts "TOTAL RECOVERED | #{tot_recovered}"
         puts ""
-        
     end
 
 
