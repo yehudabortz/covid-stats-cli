@@ -2,5 +2,5 @@
 
 require_relative '../lib/cli.rb'
 
-Cli.new.welcome_user
+Cli.new.run
  
