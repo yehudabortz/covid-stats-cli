@@ -26,16 +26,16 @@ class Cli
         puts "Global Stats:"
         sleep(0.065)
         puts ""
-        puts "  TOTAL CASES | #{tot_cases}".colorize(:light_magenta)
+        puts "  • TOTAL CASES | #{tot_cases}".colorize(:light_magenta)
         sleep(0.065)
         puts ""
-        puts "  TOTAL DEATHS | #{tot_deaths}".colorize(:light_red)
+        puts "  • TOTAL DEATHS | #{tot_deaths}".colorize(:light_red)
         sleep(0.065)
         puts ""
-        puts "  TOTAL RECOVERED | #{tot_recovered}".colorize(:green)
+        puts "  • TOTAL RECOVERED | #{tot_recovered}".colorize(:green)
         sleep(0.065)
         puts ""
-        puts "  TOTAL ACTIVE | #{tot_active}".colorize(:light_yellow)
+        puts "  • TOTAL ACTIVE | #{tot_active}".colorize(:light_yellow)
         sleep(0.065)
         puts ""
         puts "————————————————————————————————"
@@ -114,32 +114,32 @@ class Cli
             puts "Total:"
             sleep(0.065)
             puts ""
-            puts "  CASES | #{tot_cases}".colorize(:light_magenta)
+            puts "  • CASES | #{tot_cases}".colorize(:light_magenta)
             sleep(0.065)
             puts ""
-            puts "  DEATHS | #{tot_deaths}".colorize(:light_red)
+            puts "  • DEATHS | #{tot_deaths}".colorize(:light_red)
             sleep(0.065)
             puts ""
-            puts "  RECOVERED | #{tot_recovered}".colorize(:green)
+            puts "  • RECOVERED | #{tot_recovered}".colorize(:green)
             sleep(0.065)
             puts ""
-            puts "  ACTIVE | #{tot_active}".colorize(:light_yellow)
+            puts "  • ACTIVE | #{tot_active}".colorize(:light_yellow)
             sleep(0.065)
             puts ""
-            puts "  TESTED | #{tot_tests}".colorize(:light_blue)
+            puts "  • TESTED | #{tot_tests}".colorize(:light_blue)
             sleep(0.065)
             puts ""
-            puts "  CRITICAL | #{critical}".colorize(:cyan)
+            puts "  • CRITICAL | #{critical}".colorize(:cyan)
             sleep(0.065)
             puts ""
             puts ""
             puts "Today:"
             sleep(0.065)
             puts ""
-            puts "  CASES | #{today_cases}".colorize(:light_magenta)
+            puts "  • CASES | #{today_cases}".colorize(:light_magenta)
             sleep(0.065)
             puts ""
-            puts "  DEATHS | #{today_deaths}".colorize(:light_red)
+            puts "  • DEATHS | #{today_deaths}".colorize(:light_red)
             sleep(0.065)
             puts ""
             puts "———————————————————————————————————————"
