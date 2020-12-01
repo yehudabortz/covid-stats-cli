@@ -22,8 +22,7 @@ class Cli
         puts "Welcome to COVID-19 Stats Check!"
         puts "————————————————————————————————"
         puts ""
-        puts "Global Stats"
-        puts "————————————"
+        puts "Global Stats:"
         puts ""
         puts "TOTAL CASES | #{tot_cases}".colorize(:light_magenta)
         puts ""
@@ -59,6 +58,9 @@ class Cli
             i += 1
             # binding.pry
         end
+        puts ""
+        puts "———————————————————————————————————————"
+        puts ""
         puts numbered_list
         puts ""
         puts "———————————————————————————————————————"
@@ -79,8 +81,8 @@ class Cli
             tot_active = add_commas_to_int("#{selection.active}")
             puts ""
             puts "———————————————————————————————————————"
-            puts "#{selection.country} Coronavirus Stats"
-            puts "———————————————————————————————————————"
+            puts ""
+            puts "#{selection.country} Coronavirus Stats:"
             puts ""
             puts "TOTAL CASES | #{tot_cases}".colorize(:light_magenta)
             puts ""
