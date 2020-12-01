@@ -21,20 +21,27 @@ class Cli
         puts "————————————————————————————————"
         puts "Welcome to COVID-19 Stats Check!"
         puts "————————————————————————————————"
+        sleep(0.065)
         puts ""
         puts "Global Stats:"
+        sleep(0.065)
         puts ""
         puts "TOTAL CASES | #{tot_cases}".colorize(:light_magenta)
+        sleep(0.065)
         puts ""
         puts "TOTAL DEATHS | #{tot_deaths}".colorize(:light_red)
+        sleep(0.065)
         puts ""
         puts "TOTAL RECOVERED | #{tot_recovered}".colorize(:green)
+        sleep(0.065)
         puts ""
         puts "TOTAL ACTIVE | #{tot_active}".colorize(:light_yellow)
+        sleep(0.065)
         puts ""
         puts "————————————————————————————————"
         continue_to_country_selection
     end
+
     
     def continue_to_country_selection
         puts ""
@@ -43,12 +50,22 @@ class Cli
         if input == "yes" || input == "YES" || input == "y" || input == "Yes" || input == "Y"
             list_country_options
         elsif input == "no" || input == "NO" || input == "n" || input == "No" || input == "N"
-            puts "Ok, Goodbye!"
+            sleep(0.065)
+            puts ""
+            puts "———————————————————————————————————————"
+            puts "Ok, Goodbye!".colorize(:magenta)
+            puts "———————————————————————————————————————"
+            puts ""
         else
+            puts ""
+            puts "———————————————————————————————————————"
+            puts "INVALID INPUT: #{input}".colorize(:light_red)
+            puts "———————————————————————————————————————"
+            puts ""
             continue_to_country_selection
         end
-
     end
+
 
     def list_country_options
         numbered_list = []
@@ -68,7 +85,6 @@ class Cli
         user_country_selection
     end
 
-    
 
     def user_country_selection
         puts "Enter The Number Corresponding To Your Selection (eg. 207)"
@@ -83,39 +99,52 @@ class Cli
             critical = add_commas_to_int("#{selection.critical}")
             today_cases = add_commas_to_int("#{selection.todayCases}")
             today_deaths = add_commas_to_int("#{selection.todayDeaths}")
-            
             puts ""
             puts ""
             puts "———————————————————————————————————————"
             puts "#{selection.country} Coronavirus Stats:"
             puts "———————————————————————————————————————"
+            sleep(0.065)
             puts ""
             puts "Total:"
+            sleep(0.065)
             puts ""
             puts "CASES | #{tot_cases}".colorize(:light_magenta)
+            sleep(0.065)
             puts ""
             puts "DEATHS | #{tot_deaths}".colorize(:light_red)
+            sleep(0.065)
             puts ""
             puts "RECOVERED | #{tot_recovered}".colorize(:green)
+            sleep(0.065)
             puts ""
             puts "ACTIVE | #{tot_active}".colorize(:light_yellow)
+            sleep(0.065)
             puts ""
             puts "TESTS | #{tot_tests}".colorize(:light_blue)
+            sleep(0.065)
             puts ""
             puts "CRITICAL | #{critical}".colorize(:cyan)
+            sleep(0.065)
             puts ""
             puts ""
             puts "Today:"
+            sleep(0.065)
             puts ""
             puts "CASES | #{today_cases}".colorize(:light_magenta)
+            sleep(0.065)
             puts ""
             puts "DEATHS | #{today_deaths}".colorize(:light_red)
+            sleep(0.065)
             puts ""
             puts "———————————————————————————————————————"
             puts ""
-
         else
-            puts "Invalid Input: #{input}"
+            puts ""
+            puts "———————————————————————————————————————"
+            puts "INVALID INPUT: #{input}".colorize(:light_red)
+            puts "———————————————————————————————————————"
+            puts ""
         end   
         search_again     
     end
@@ -127,12 +156,20 @@ class Cli
             list_country_options
         elsif input == "no" || input == "NO" || input == "n" || input == "No" || input == "N"
             puts ""
-            puts "Ok, Goodbye!"
+            sleep(0.065)
+            puts ""
+            puts "———————————————————————————————————————"
+            puts "Ok, Goodbye!".colorize(:magenta)
+            puts "———————————————————————————————————————"
             puts ""
         else
+            puts ""
+            puts "———————————————————————————————————————"
+            puts "INVALID INPUT: #{input}".colorize(:light_red)
+            puts "———————————————————————————————————————"
+            puts ""
             search_again
         end
-
     end
     
     # binding.pry
