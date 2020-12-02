@@ -15,5 +15,5 @@ class CovidStatsCli::Scraper
     def self.create_and_parse
         self.new.parse_json
     end
-
+    
 end
