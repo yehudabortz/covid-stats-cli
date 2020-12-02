@@ -16,7 +16,7 @@ $ bundle install
 ## Usage
 
 - To run program use ```ruby bin/run``` or ```bin/run ```
-- For ```bin/run``` you made need to add permissions using ```chmod a+x bin/run```
+- For ```bin/run``` you may need to add permissions using ```chmod a+x bin/run```
 
 ## Sources
 Coronavirus Data – [API](https://coronavirus-19-api.herokuapp.com/countries)
