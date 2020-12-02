@@ -1,3 +1,4 @@
+# This class is responsible for instantiating @Country objecs from CovidStatsCli::Scraper
 class CovidStatsCli::Country
     
     @@all = []

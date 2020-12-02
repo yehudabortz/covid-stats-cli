@@ -1,3 +1,4 @@
+# This class is responsible for the CLI logic and displays data from the CovidStatsCli::Country class
 class CovidStatsCli::Cli
     include CovidStatsCli::Formattable::AddCommas
 
