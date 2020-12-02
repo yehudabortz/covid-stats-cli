@@ -9,10 +9,12 @@ class CovidStatsCli::Cli
     def welcome_user
         CovidStatsCli::Country.create_from_scraper
         global_stats = CovidStatsCli::Country.find_stats("World")
-        tot_cases = add_commas_to_int("#{global_stats.cases}")
-        tot_deaths = add_commas_to_int("#{global_stats.deaths}")
-        tot_recovered = add_commas_to_int("#{global_stats.recovered}")
-        tot_active = add_commas_to_int("#{global_stats.active}")
+        
+        tot_cases = add_commas_to_int(global_stats.cases)
+        tot_deaths = add_commas_to_int(global_stats.deaths)
+        tot_recovered = add_commas_to_int(global_stats.recovered)
+        tot_active = add_commas_to_int(global_stats.active)
+
         puts ""
         puts ""
         puts "————————————————————————————————"
@@ -91,14 +93,14 @@ class CovidStatsCli::Cli
         input = gets.strip
         if input.to_i.to_s == input && input.to_i <= CovidStatsCli::Country.list_countries.length
             selection = CovidStatsCli::Country.find_from_input(input)
-            tot_cases = add_commas_to_int("#{selection.cases}")
-            tot_deaths = add_commas_to_int("#{selection.deaths}")
-            tot_recovered = add_commas_to_int("#{selection.recovered}")
-            tot_active = add_commas_to_int("#{selection.active}")
-            tot_tests = add_commas_to_int("#{selection.totalTests}")
-            critical = add_commas_to_int("#{selection.critical}")
-            today_cases = add_commas_to_int("#{selection.todayCases}")
-            today_deaths = add_commas_to_int("#{selection.todayDeaths}")
+            tot_cases = add_commas_to_int(selection.cases)
+            tot_deaths = add_commas_to_int(selection.deaths)
+            tot_recovered = add_commas_to_int(selection.recovered)
+            tot_active = add_commas_to_int(selection.active)
+            tot_tests = add_commas_to_int(selection.totalTests)
+            critical = add_commas_to_int(selection.critical)
+            today_cases = add_commas_to_int(selection.todayCases)
+            today_deaths = add_commas_to_int(selection.todayDeaths)
             puts ""
             puts ""
             puts "———————————————————————————————————————"
