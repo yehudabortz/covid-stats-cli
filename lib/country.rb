@@ -1,4 +1,5 @@
 class CovidStatsCli::Country
+    
     @@all = []
 
     def initialize(attributes)
