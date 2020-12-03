@@ -9,7 +9,6 @@ class CovidStatsCli::Country
           self.send(("#{key}="), value)
         end
         @@all << self
-        # binding.pry
     end
 
     def self.all
