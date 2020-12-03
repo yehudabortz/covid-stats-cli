@@ -9,6 +9,7 @@ class CovidStatsCli::Country
           self.send(("#{key}="), value)
         end
         @@all << self
+        # binding.pry
     end
 
     def self.all
@@ -17,8 +18,8 @@ class CovidStatsCli::Country
 
     def self.create_from_scraper
         covid_data = CovidStatsCli::Scraper.create_and_parse
-        covid_data.each do |country|
-            self.new(country)
+        covid_data.each do |attributes|
+            self.new(attributes)
         end
     end
 
