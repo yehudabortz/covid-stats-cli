@@ -46,10 +46,10 @@ class CovidStatsCli::Cli
     def continue_to_country_selection
         puts ""
         puts "Would You Like To View Stats By Country? (y/n)"
-        input = gets.strip
-        if input == "yes" || input == "YES" || input == "y" || input == "Yes" || input == "Y"
+        input = gets.strip.downcase
+        if input == "yes" || input == "y"
             list_country_options
-        elsif input == "no" || input == "NO" || input == "n" || input == "No" || input == "N"
+        elsif input == "no" || input == "n" 
             sleep(0.065)
             puts ""
             puts "Ok, Goodbye!".colorize(:light_cyan)
@@ -153,10 +153,10 @@ class CovidStatsCli::Cli
 
     def search_again
         puts "Would You Like To Search Again? (y/n)"
-        input = gets.strip
-        if input == "yes" || input == "YES" || input == "y" || input == "Yes" || input == "Y"
+        input = gets.strip.downcase
+        if input == "yes" || input == "y"
             list_country_options
-        elsif input == "no" || input == "NO" || input == "n" || input == "No" || input == "N"
+        elsif input == "no" || input == "n"
             sleep(0.065)
             puts ""
             puts "Ok, Goodbye!".colorize(:light_cyan)
