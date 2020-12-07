@@ -66,11 +66,10 @@ class CovidStatsCli::Cli
 
 
     def list_country_options
-        numbered_list = []
-        i = 1
-        CovidStatsCli::Country.list_countries.each do |c|
-            numbered_list << c.split("").insert(0, "#{i.to_s.insert(-1, ".").colorize(:light_cyan)} ").join
+        i = 0
+        numbered_list = CovidStatsCli::Country.list_countries.map do |c|
             i += 1
+            c.split("").insert(0, "#{i.to_s.insert(-1, ".").colorize(:light_cyan)} ").join
         end
         puts ""
         puts "———————————————————————————————————————"
