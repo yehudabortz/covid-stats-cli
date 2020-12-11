@@ -89,7 +89,7 @@ class CovidStatsCli::Cli
     def user_country_selection
         puts "Enter The Number Corresponding To Your Selection (e.g. #{"207".colorize(:light_cyan)})"
         input = gets.strip
-        if input.to_i.to_s == input && input.to_i <= CovidStatsCli::Country.list_countries.length
+        if input.to_i.to_s == input && input.to_i <= CovidStatsCli::Country.list_countries.length && input.to_i > 0
             selection = CovidStatsCli::Country.find_from_input(input)
             tot_cases = add_commas_to_int(selection.cases)
             tot_deaths = add_commas_to_int(selection.deaths)
